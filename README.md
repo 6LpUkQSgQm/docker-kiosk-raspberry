@@ -188,38 +188,7 @@ To do so, type in the following command:
 
 ```docker run hello-world```
 
-### 5. Download and run your app
-
-* run ``cd Documents`` and past this following:
-
-```git clone https://github.com/JulienChapron/covid19-leaflet-docker.git```
-
-* run ``cd covid19-leaflet-docker``, install dependencies and build your app:
-
-```yarn install && docker build -t covid19-leaflet-docker .```
-
-* Create a script file
-
-```touch /home/pi/docker.sh```
-
-* Past this following:
-
- ```bash
-#!/bin/bash
-
-#run your app
-docker run --rm -d  -p 8080:8080/tcp covid19-leaflet-docker:latest
-```
-
-* open ``/etc/rc.local`` and pas this following:
-
-```bash
-...
-sudo bash /home/pi/docker.sh &
-exit 0
-```
-
-### 6. Download and install node.js 14
+### 5. Download and install node.js 14
 
 * Install node.js 14 by first installing the required repository:
 
@@ -240,3 +209,37 @@ deb-src https://deb.nodesource.com/node_14.x focal main
 * test your version:
 
 ```node -v```
+
+### 6. Download and run your app
+
+* run ``cd Documents`` and past this following:
+
+```git clone https://github.com/JulienChapron/covid19-leaflet-docker.git```
+
+* run ``cd covid19-leaflet-docker``, install dependencies and build your app:
+
+ ```shell
+npm install
+sudo docker build -t covid19-leaflet-docker .
+```
+
+* Create a script file
+
+```touch /home/pi/docker.sh```
+
+* Past this following:
+
+ ```shell
+#!/bin/bash
+
+#run your app
+docker run --rm -d  -p 8080:8080/tcp covid19-leaflet-docker:latest
+```
+
+* open ``/etc/rc.local`` and pas this following:
+
+```bash
+...
+sudo bash /home/pi/docker.sh &
+exit 0
+```
