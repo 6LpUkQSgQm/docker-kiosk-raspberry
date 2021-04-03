@@ -218,3 +218,25 @@ docker run --rm -d  -p 8080:8080/tcp covid19-leaflet-docker:latest
 sudo bash /home/pi/docker.sh &
 exit 0
 ```
+
+### 6. Download and install node.js 14
+
+* Install node.js 14 by first installing the required repository:
+
+```curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -```
+
+* The script above will create apt sources list file for the NodeSource Node.js 14.x repo:
+
+ ```shell
+cat /etc/apt/sources.list.d/nodesource.list
+deb https://deb.nodesource.com/node_14.x focal main
+deb-src https://deb.nodesource.com/node_14.x focal main
+```
+
+* Once the repository is added, you can begin the installation of Node.js 14 on Ubuntu & Debian Linux:
+
+```sudo apt -y install nodejs```
+
+* test your version:
+
+```node -v```
