@@ -25,15 +25,14 @@ This part assumes that ssh is enabled for your image and that the default user i
 * Boot the Raspberry Pi and open up a terminal window
 * Run the following commands:
 
-```
+```shell
 ssh-keygen -R raspberrypi.local
 ssh pi@raspberrypi.local
 ```
 
 ### 6. Get the latest updates
 
-```
+```shell
 sudo apt-get update -y
 sudo apt-get upgrade -y
 ```
-
