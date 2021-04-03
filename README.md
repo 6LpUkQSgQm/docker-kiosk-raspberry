@@ -1,5 +1,7 @@
 # simple-docker-kiosk-raspberry
 
+<img src="./images/raspberry-logo.png" width="600px"/>
+
 ## Kiosk mode
 
 ### 1. Download Raspberry Pi OS (formerly Raspbian) Buster lite
