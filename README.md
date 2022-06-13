@@ -1,4 +1,4 @@
-# simple-docker-kiosk-raspberry
+# docker-kiosk-raspberry
 
 <img src="./images/raspberry-logo.png" width="600px"/>
 
